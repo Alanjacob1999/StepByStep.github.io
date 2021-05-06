@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 
 body{
+	font-family: 'Roboto Condensed', sans-serif;
 	font-family: agency fb;
+	
 }
 
 .header{
@@ -304,19 +307,20 @@ font-size: 1.8rem;
 }
 .links a{
 
-font-size: 1.2rem;
+font-size: 1rem;
 }
 .navbar2{
 		display:none;
 	}
 
 .description_footer p{
-font-size: 1rem;
+font-size: 0.8rem;
 margin-top: -1rem;
 }
 
 .footer_img{
-	margin-top: -5rem;
+	display: block;
+	margin-top: -3.5rem;
 	margin-left: 1rem;
 }	
 
@@ -778,13 +782,4 @@ footer{
 		font-size: 20px;
 	}
 
-
-
-	
 }
-
-
-
-
-
-
