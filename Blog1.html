@@ -1,0 +1,252 @@
+<!--Step by Step Blog 1 + Format -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Step By Step | Ultrasonic Sensor</title>
+	<link rel="stylesheet" type="text/css" href="Blog_Format.css">
+	<link rel="icon" href="Icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+	<script src="https://use.fontawesome.com/b431aa3f08.js"></script>
+</head>
+<body>
+<div class="header">
+	<h1>Step By Step! <i id="category_electronics" class="fa fa-microchip" aria-hidden="true"></i></h1>
+
+</div>
+<div class = "navbar1">
+	<ul>
+
+	<li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+	<li><a href="Electronics.html"><i class="fa fa-microchip" aria-hidden="true"></i> Electronics</a></li>
+	<li><a href="Computer_Troubleshoot.html"><i class="fa fa-desktop" aria-hidden="true"></i> Computer Troubleshoot</a></li>
+	<li><a href="Coming_Soon.html"><i class="fa fa-paint-brush" aria-hidden="true"></i> DIY</a></li>
+	<li><a href="How_To.html"><i class="fa fa-steam" aria-hidden="true"></i> How To</a></li>
+	<li><a href="Coming_Soon.html" id="project"><i class="fa fa-tasks" aria-hidden="true"></i> Project</a></li>
+	<li><a href=""><i class="fa fa-info-circle" aria-hidden="true"></i> About</a></li>
+
+	</ul>
+</div>
+
+<div class = "navbar2">
+	<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+	<a href="Electronics.html"><i class="fa fa-microchip" aria-hidden="true"></i> Electronics</a>
+	<a href="Computer_Troubleshoot.html"><i class="fa fa-desktop" aria-hidden="true"></i> Computer Troubleshoot</a>
+	<a href="Coming_Soon.html"><i class="fa fa-paint-brush" aria-hidden="true"></i> DIY</a>
+	<a href="How_To.html"><i class="fa fa-steam" aria-hidden="true"></i> How To</a>
+	<a href="Coming_Soon.html" id="project"><i class="fa fa-tasks" aria-hidden="true"></i> Project</a>
+	<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+</div>
+
+<div class="main">
+	<h2>​Arduino: Interfacing Ultrasonic Sensor</h2>
+	<pre>Published by - Admin</pre>
+
+
+	<p>In this instructable, we are going to work with Ultrasonic Sensor and run the basic test using Arduino Uno.</p>
+	<p>First we will start with introduction to both Arduino and Ultrasonic Sensor and then we will proceed to make the connection and add codes for interfacing sensor.</p>
+	<p>Let's get started.</p>
+	<p>Source:</p>
+	<ul>
+		<li>Arduino Uno</li>
+		<li>Ultrasonic Sensor</li>
+		<li>Jumper Wires (male-female)</li>
+	</ul>
+
+	<hr>
+
+	<h2>Step 1: About Ultrasonic Sensor</h2>
+	<p>An Ultrasonic Sensor is an electronic device that is used to detect the distance of the object. The sensor converts electrical signals into Ultrasonic Sound waves which travel faster than the Normal Audible sound waves and emits them then receives the reflected sound waves and converts the sound waves into electrical signals and determines the distance of the object. <br>The Ultrasonic Sensor has to trigger the pulse for at least 10 microseconds (10us).</p>
+	<p>Pinout of 4 pins:</p>
+	<ol>
+		<li>VCC - positive terminal of the source should be connected.</li>
+		<li>GND - negative or ground terminal of the source should be connected.</li>
+		<li>TRIG - Acts as an output that emits the Ultrasonic Sound waves.</li>
+		<li>ECHO - Acts as an input that receives the reflected Ultrasonic Sound waves.</li>
+	</ol>
+	<p>Datasheet stated features:
+		<br> <ul>
+			<li>Operating Voltage: 5V DC</li>
+			<li>Operating Current: 15mA</li>
+			<li>Measure Angle: 15°</li>
+			<li>Ranging Distance: 2cm - 4m</li>
+		</ul></p>
+
+	<img src="https://content.instructables.com/ORIG/FQU/FGKM/KNQ1DGAG/FQUFGKMKNQ1DGAG.jpg?auto=webp&frame=1&fit=bounds&md=af3d68abd43aaeb4fbae1a91e1d7a2f8">
+
+	<hr>
+
+
+
+	<h2>Step 2: About Arduino</h2>
+	 <img src="https://content.instructables.com/ORIG/F95/8E7P/KNQ1DGAF/F958E7PKNQ1DGAF.jpg?auto=webp&frame=1&width=794&fit=bounds&md=97d71ca2e2df5e11735d5590895394f4">
+	<p>Arduino is an open-source microcontroller board running on the ATmega328p microcontroller. The board is consists of digital as well as analog I/O pins. <br>Coding is done and uploaded by Arduino IDE. <br>
+    The programming language used by the Arduino is C, C++.</p>
+
+    <hr>
+   
+
+	<h2>Step 3: Circuit Connection</h2>
+	<picture>
+		<img src="https://content.instructables.com/ORIG/F89/1GBL/KNOLZQT7/F891GBLKNOLZQT7.jpg?auto=webp&frame=1&width=1024&height=1024&fit=bounds&md=c203b9dfca6631b805898ccabcb33e87">
+		<img src="https://content.instructables.com/ORIG/FU9/K439/KNQ1FTQ0/FU9K439KNQ1FTQ0.png?auto=webp&frame=1&fit=bounds&md=014d0a060c943c3bf1e7fd8acd882c59">
+		<img src="https://content.instructables.com/ORIG/FCV/Y4W2/KNQ1FTPZ/FCVY4W2KNQ1FTPZ.png?auto=webp&frame=1&fit=bounds&md=15b017e5489ec73df313122a61a4649e">
+	</picture>
+	<p>Connecting the Ultrasonic Sensor to the Arduino UNO using jumper wires.</p>
+	<p>Connection of Ultrasonic to Arduino:</p>
+	<ol>
+		<li>GND --- GND</li>
+		<li>VCC --- 5V or VIN</li>
+		<li>TRIG --- Pin 2 (Digital pin)</li>
+		<li>ECHO --- Pin 3 (Digital pin)</li>
+	</ol>
+	<p>You can use a breadboard but it is not important.</p>
+	<em>Note: Don't let the metal surface of the ultrasonic sensor to any other metal surface that may cause it to short circuit.</em>
+
+	<hr>
+
+
+	<h2>Step 4: Coding</h2>
+	<div class="code">
+		<p>
+<br>/* Ultrasonic Sensor Testing Arduino Code 
+<br>Author - AlanJacob688
+<br>*/
+<br>
+<br>/* These two are used to define the pin number of the trig and echo in arduino */
+<br>
+<br>#define trig 2
+<br>#define echo 3
+<br>
+<br>long duration; // This will calculate the duration of the sound to return
+<br>int distance; // calculates the distance
+<br>
+<br>void setup() {
+<br>
+<br> // put your setup code here, to run once:
+<br>  /* Here initialize the pinMode we are goind to have for trig and echo*/
+<br>  pinMode(trig,OUTPUT);
+<br>  pinMode(echo,INPUT);
+<br>
+<br>   /*For serial monitor */
+<br>   Serial.begin(9600); //Recommended Baud-rate
+<br>       Serial.println("Ultrasonic Sensor");
+<br>
+}
+<br>
+<br>void loop() {
+<br>
+<br>  // put your main code here, to run repeatedly:
+<br>   /*Now here we are going to add the codes that are needed to be run repeatedly*/
+<br>
+<br>   while(!Serial.available()){  //Only runs the code when we open the serial monitor
+<br>
+<br>    digitalWrite(trig,LOW);
+<br>    delayMicroseconds(2);
+<br>    digitalWrite(trig,HIGH);
+<br>    delayMicroseconds(10);
+<br>    digitalWrite(trig,LOW);
+<br>
+<br>   Serial.println("Obtaining...");
+<br>
+<br>    duration = pulseIn(echo,HIGH);
+<br>    distance = ((duration*0.03435)/2); // The output is in Centimeters (cm)
+<br>
+<br>    Serial.print(distance);
+<br>    Serial.println("cm");
+<br>
+<br>    delay(2000);
+<br>   }
+<br>}
+		</p>
+	</div>
+	<hr>
+	
+
+	
+	
+
+
+<h2>Step 5: Code Explanation</h2>
+	<p>First, we will define the pin of Arduino we are using for trig and echo using #define. Then we will declare two variables:</p>
+	<ol>
+		<li>long duration - duration is used to store the duration of the pulse sent and received from an Ultrasonic Sensor. long is used as the result we get is larger than what int could store.</li>
+		<li>int distance - distance is stored here (in centimeters).</li>
+	</ol>
+	<br>
+	<p>void setup() is used to run the code for one time only.</p>
+	<p>Now inside void setup(), declare the pinMode (used to determine the state of the pin, it can either be INPUT or OUTPUT) of trig and echo.</p>
+	<p>trig is emitting the pulse so it will be set to OUTPUT, while echo is receiving the pulse and thus is set to INPUT.</p>
+	<p>We are using a Serial Monitor to get our results and thus we have to declare its Baud-rate.</p>
+	<br>
+	<p>void loop() is used to run code repeatedly.</p>
+	<p>Now inside void loop(), we are writing the code that will trigger as well as read the results and print it to the Serial monitor.</p>
+	<p>At first, we will trigger the sound wave using trig, we will use digitalWrite(Pin, Value). Write a HIGH or a LOW value in Value. If the pin has been configured as an OUTPUT with pinMode(), its voltage will be set to the corresponding value: 5V (or 3.3V on 3.3V boards) for HIGH, 0V (ground) for LOW.</p>
+	<p>trig is set to LOW at the beginning for 2 microseconds and then it is set to HIGH for 10 microseconds as given in the datasheet and then again set it back to the LOW.</p>
+	<p>Now, the pulseIn() function will be set the echo pin to HIGH and will receive the reflected sound waves.</p>
+	<p>If the value is HIGH, pulseIn() waits for the pin to go from LOW to HIGH, starts timing, then waits for the pin to go LOW. Returns the length of the pulse in microseconds. Works on pulses from 10 microseconds to 3 minutes in length.</p>
+	<p>The value from pulseIn() is stored in the duration variable then we will calculate the distance in centimeters.</p>
+	<p>The formula for calculations of distance:</p>
+	<p>Distance(in cm) = pulse width(microseconds) / 58. As the distance between the sensor and the object increases the pulse width also increases with it.</p>
+	<p>Now, we have to take the speed of sound into consideration</p>
+	<p>The speed of sound at 0-degree Celcius is 331.5 m/s.</p>
+	<p>The speed of sound at 20-degree Celcius is 343.5 m/s.</p>
+	<em>* Check your temperature and search on the internet for the value.</em>
+	<p>I am taking the speed of sound at 20-degree for my calculations but it can be different for you.</p>
+	<p>Speed of sound at 20-degree Celcius = 343.5 m/s</p>
+	<p>= (343.5 *100)/1000000 = 0.03435 cm.</p>
+	<p>Now we know that the duration of sound emitted and received both are included when we get the result from pulseIn() and thus we have to discard the time of emission and only consider the time of receiving and for that we are dividing the duration variable by 2.
+	And thus, distance = (duration*0.03435)/2.</p>
+	<p>At last, you just have to print the values in Serial Monitor.</p>
+
+	<hr>
+
+<h2>​Step 6: Testing</h2>
+
+<p>Upload the code to Arduino Uno and check for the status to show "Done Uploading".
+
+Now open the Serial Monitor and place any object or hand in front of the sensor and you will get your result.</p>
+<hr>
+
+
+</div>
+
+<br>
+<br>
+<!-- footer -->	
+
+<!-- footer -->	
+
+<footer>
+	<h2>Step By Step!</h2>
+
+	<div class="links">
+	<a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+	<a href=""><i class="fa fa-info-circle" aria-hidden="true"></i> About</a>
+    <a href=""><i class="fa fa-envelope" aria-hidden="true"></i> Email</a>
+    <a href="" class="Instructable_account"><i class="fa fa-android" aria-hidden="true"></i> Instructable</a>
+
+
+
+    </div>
+    <br>
+    <hr>
+    <br>
+     <div class="description_footer">
+    	<p>Step By Step is a educational blog website where you can learn various technologies and skills. <br>
+    	We make it easy for you to follow how to make anything one step at a time.</p>
+    </div>
+    <img class="footer_img" src="Footer 2.png">
+
+
+
+    
+    
+
+
+</footer>
+
+
+</body>
+</html>
